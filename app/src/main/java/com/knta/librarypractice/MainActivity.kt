@@ -1,6 +1,7 @@
 package com.knta.librarypractice
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,6 +18,15 @@ class MainActivity : AppCompatActivity() {
 
     fun setUpEvents() {
 //        버튼 이외의, TextView, ImageView, LinearLayout 등등도 setOnClickListener로 이벤트 처리가 가능함.
+
+        btnCall.setOnClickListener {
+
+            val myUri = Uri.parse("tel:01033337777")
+            val myIntent = Intent( Intent.ACTION_CALL, myUri )
+            startActivity(myIntent)
+
+        }
+
 
         imgProfile.setOnClickListener {
 

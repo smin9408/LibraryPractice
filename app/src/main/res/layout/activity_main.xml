@@ -57,6 +57,7 @@
             android:layout_weight="1" />
 
         <Button
+            android:id="@+id/btnCall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전화 연결(CALL)" />
